@@ -1,0 +1,16 @@
+.button {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  border-radius: var(--spacing-md);
+  background-color: var(--color-btn);
+  color: var(--color-txt-wth);
+  padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.button:hover {
+  background-color: var(--color-btn-hov);
+}

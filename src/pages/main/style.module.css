@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  padding: 0 80px;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
+}
+
+.noResult {
+  font-family: Arial;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--color-nrs);
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .search {
+    padding: 10px 16px;
+    gap: var(--spacing-2xl);
+  }
+}

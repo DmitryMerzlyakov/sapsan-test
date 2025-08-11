@@ -1,0 +1,31 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(204px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.card {
+  width: 204px;
+  height: 204px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: var(--spacing-xs);
+  border: 1px solid var(--color-brd);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 660px) {
+  .card {
+    width: 114px;
+    height: 114px;
+    cursor: pointer;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(114px, 1fr));
+  }
+}
