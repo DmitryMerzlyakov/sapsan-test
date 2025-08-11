@@ -23,7 +23,7 @@
 ### 1. Клонируем репозиторий
 ```bash
 git clone https://github.com/DmitryMerzlyakov/sapsan-test.git
-cd unsplash-search
+cd sapsan-test
 ```
 ### 2. Установка зависимостей
 ```bash
