@@ -16,15 +16,13 @@
 
 Приложение задеплоено на Vercel:
 
-[https://unsplash-search-demo.vercel.app](https://unsplash-search-demo.vercel.app)
-
-
+[Приложение](https://sapsan-test-nine.vercel.app/)
 
 ## Запуск проекта локально
 
 ### 1. Клонируем репозиторий
 ```bash
-git clone https://github.com/ваше-имя/unsplash-search.git
+git clone https://github.com/DmitryMerzlyakov/sapsan-test.git
 cd unsplash-search
 ```
 ### 2. Установка зависимостей
