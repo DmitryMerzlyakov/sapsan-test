@@ -12,17 +12,18 @@ interface FormValues {
 
 export const SearchForm = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { control, handleSubmit, setValue } = useForm<FormValues>();
+  const search = searchParams.get("search") || "";
+  const { control, handleSubmit, reset } = useForm<FormValues>({ defaultValues: { searchText: "" }}); 
 
+  const handleClear = () => {
+    reset();
+    setSearchParams({});
+  }
+ 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     setSearchParams(() => {
       return new URLSearchParams({ search: data.searchText });
     });
-  };
-
-  const handleClear = () => {
-    setValue('searchText', '')
-    setSearchParams({})
   };
 
   return (
@@ -30,14 +31,14 @@ export const SearchForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       className={classNames(
         style.form,
-        searchParams.get("search") && style.search
+        search && style.search
       )}
     >
       <Controller
         render={({ field: { onChange, value } }) => (
           <Input
             onChange={onChange}
-            value={searchParams.get('search') === "" ? value : searchParams.get('search') as string}
+            value={value}
             inputPlaceholder="Телефоны, яблоки, груши..."
             iconPlaceholder={<SearchImage />}
             iconClear={<ClearImage />}

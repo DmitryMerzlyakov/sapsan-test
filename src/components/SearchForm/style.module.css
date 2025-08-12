@@ -14,11 +14,17 @@
 
 @media (max-width: 767px) {
   .form {
-    width: 100%;
-    margin: 276px 0;
+    position: fixed;
+    width: 92%;
+    top: 232px;
+    left: 16px;
+    right: 16px;
+    margin: 0;
   }
 
   .search {
     margin: 0;
+    position: sticky;
+    width: 100%;
   }
 }
