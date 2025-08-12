@@ -15,7 +15,7 @@
 @media (max-width: 767px) {
   .form {
     width: 100%;
-    margin: 276px 16px;
+    margin: 276px 0;
   }
 
   .search {

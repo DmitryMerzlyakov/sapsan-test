@@ -5,13 +5,15 @@ import style from "./style.module.css";
 export interface IInputProps {
   inputPlaceholder?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  onClear?: () => void;
   value?: string;
   iconPlaceholder?: React.ReactNode;
+  iconClear?: React.ReactNode;
 }
 
 export const Input = React.forwardRef(
   (
-    { iconPlaceholder, value, onChange, inputPlaceholder }: IInputProps,
+    { iconPlaceholder, value, onChange, inputPlaceholder, iconClear, onClear = () => {} }: IInputProps,
     ref: React.ForwardedRef<HTMLInputElement>
   ) => {
     return (
@@ -23,7 +25,13 @@ export const Input = React.forwardRef(
           value={value}
           ref={ref}
         />
-        <span className={style.input_icon}>{iconPlaceholder}</span>
+        <span className={style.input_icon_placeholder}>{iconPlaceholder}</span>
+        {value && <button 
+          className={style.input_icon_clear}
+          onClick={onClear}
+        >
+          {iconClear}
+        </button>}
       </div>
     );
   }

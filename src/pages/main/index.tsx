@@ -16,16 +16,22 @@ export const Home = () => {
         searchParams.get("search") && style.search
       )}
     >
-      <SearchForm />
-      {
-        !photos.length && !isLoading && !searchParams &&
-        <p className={style.noResult}>К сожалению, поиск не дал результатов</p>
+      <header className={classNames(searchParams.get("search") && style.header)}>
+        <SearchForm />
+      </header>
+      {photos.length !== 0 && 
+        <main className={style.content}>
+          {
+            !photos.length && !isLoading && !searchParams &&
+            <p className={style.noResult}>К сожалению, поиск не дал результатов</p>
+          }
+          <PhotoArea
+            photos={photos}
+            onLoadMore={() => fetchNextPage()}
+            hasMore={!!hasNextPage}
+          />
+        </main>
       }
-      <PhotoArea
-        photos={photos}
-        onLoadMore={() => fetchNextPage()}
-        hasMore={!!hasNextPage}
-      />
     </div>
   );
 };

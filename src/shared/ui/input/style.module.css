@@ -21,10 +21,33 @@
   background-color: var(--color-inp);
 }
 
-.input_icon {
+.input:hover {
+  background-color: var(--color-inp-hov);
+}
+
+.input_icon_placeholder {
   position: absolute;
   width: var(--spacing-2xl);
   height: var(--spacing-2xl);
   top: var(--spacing-lg);
   left: var(--spacing-md);
+}
+
+.input_icon_clear {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  overflow: visible;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  position: absolute;
+  width: var(--spacing-2xl);
+  height: var(--spacing-2xl);
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  cursor: pointer;
 }

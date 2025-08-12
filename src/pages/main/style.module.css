@@ -9,6 +9,20 @@
   gap: var(--spacing-3xl);
 }
 
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-bgc);
+  z-index: 100;
+  padding: var(--spacing-md) 0;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-md) 0;
+}
+
 .noResult {
   font-family: Arial;
   font-weight: 400;
