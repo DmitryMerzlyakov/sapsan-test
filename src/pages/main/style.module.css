@@ -6,20 +6,19 @@
 .search {
   padding: 0 80px;
   flex-direction: column;
-  gap: var(--spacing-3xl);
 }
 
 .header {
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: var(--spacing-md) 0;
+  background-color: var(--color-bgc);
 }
 
 .content {
   flex: 1;
   overflow-y: auto;
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-xl) 0;
 }
 
 .noResult {
@@ -35,7 +34,14 @@
 
 @media (max-width: 767px) {
   .search {
-    padding: 10px 16px;
-    gap: var(--spacing-2xl);
+    padding: 0 16px;
+  }
+
+  .header {
+    padding: 10px 0;
+  }
+
+  .content {
+    padding: 0;
   }
 }
