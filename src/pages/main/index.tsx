@@ -16,7 +16,7 @@ export const Home = () => {
         searchParams.get("search") && style.search
       )}
     >
-      <header className={classNames(searchParams.get("search") && style.header)}>
+      <header className={classNames(style.header, searchParams.get("search") && style.header_search)}>
         <SearchForm />
       </header>
       {photos.length !== 0 && 
