@@ -31,8 +31,8 @@
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
   position: fixed;
-  top: 24px;
-  right: 24px;
+  top: var(--spacing-2xl);
+  right: var(--spacing-2xl);
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
@@ -66,8 +66,8 @@
 
   .close {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: var(--spacing-xl);
+    right: var(--spacing-xl);
     z-index: 10;
   }
 }

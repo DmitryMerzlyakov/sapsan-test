@@ -9,7 +9,7 @@
 }
 
 .header {
-  height: 232px;
+  height: 276px;
   display: flex;
   align-items: flex-end;
 }
@@ -31,7 +31,7 @@
   font-family: Arial;
   font-weight: 400;
   font-style: Regular;
-  font-size: 16px;
+  font-size: var(--spacing-xl);
   line-height: 100%;
   letter-spacing: 0%;
   color: var(--color-nrs);
@@ -40,10 +40,10 @@
 
 @media (max-width: 767px) {
   .search {
-    padding: 0 16px;
+    padding: 0 var(--spacing-xl);
   }
 
   .header_search {
-    padding: 10px 0;
+    padding: var(--spacing-md) 0;
   }
 }

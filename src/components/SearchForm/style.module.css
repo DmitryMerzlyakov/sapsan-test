@@ -1,6 +1,6 @@
 .form {
   width: 512px;
-  height: 48px;
+  height: var(--spacing-sxl);
   display: flex;
   gap: var(--spacing-sm);
   position: sticky;
@@ -8,7 +8,7 @@
 }
 
 .search {
-  margin: 40px 0 var(--spacing-xl) 0;
+  margin: var(--spacing-xxl) 0 var(--spacing-xl) 0;
 }
 
 @media (max-width: 767px) {
