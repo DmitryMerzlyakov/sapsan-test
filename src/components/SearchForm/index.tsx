@@ -13,7 +13,7 @@ interface FormValues {
 export const SearchForm = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const search = searchParams.get("search") || "";
-  const { control, handleSubmit, reset } = useForm<FormValues>({ defaultValues: { searchText: "" }}); 
+  const { control, handleSubmit, reset } = useForm<FormValues>(); 
 
   const handleClear = () => {
     reset();

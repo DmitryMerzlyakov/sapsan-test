@@ -16,6 +16,8 @@
   --spacing-xl: 16px;
   --spacing-2xl: 24px;
   --spacing-3xl: 36px;
+  --spacing-xxl: 40px;
+  --spacing-sxl: 48px;
 }
 
 * {
