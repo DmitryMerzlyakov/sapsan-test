@@ -26,12 +26,12 @@ export const Input = React.forwardRef(
           ref={ref}
         />
         <span className={style.input_icon_placeholder}>{iconPlaceholder}</span>
-        {value && <button 
+        {value && <span 
           className={style.input_icon_clear}
           onClick={onClear}
         >
           {iconClear}
-        </button>}
+        </span>}
       </div>
     );
   }

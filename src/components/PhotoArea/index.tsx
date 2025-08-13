@@ -34,14 +34,14 @@ export const PhotoArea = ({ photos, onLoadMore, hasMore }: IPhotoAreaProps) => {
         scrollThreshold="100px"
       >
         <div className={style.grid}>
-          {photos.map((photo) => (
+          {photos.map((photo: IPhoto) => (
             <div
               key={photo.id}
               className={style.card}
               onClick={() => handleClickPhoto(photo)}
             >
               <img
-                src={photo.urls.small_s3}
+                src={photo.urls.thumb}
                 alt={photo.alt_description || "Photo"}
                 className={style.image}
                 loading="lazy"

@@ -29,7 +29,7 @@
   position: absolute;
   width: var(--spacing-2xl);
   height: var(--spacing-2xl);
-  top: var(--spacing-lg);
+  top: var(--spacing-md);
   left: var(--spacing-md);
 }
 
@@ -50,4 +50,10 @@
   top: var(--spacing-md);
   right: var(--spacing-md);
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .input {
+    padding: var(--spacing-sm) var(--spacing-2xl) var(--spacing-sm) var(--spacing-3xl);
+  }
 }

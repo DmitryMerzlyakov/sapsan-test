@@ -13,12 +13,11 @@ interface FormValues {
 export const SearchForm = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const search = searchParams.get("search") || "";
-  const { control, handleSubmit, reset } = useForm<FormValues>(); 
+  const { control, handleSubmit, setValue, formState: { defaultValues } } = useForm<FormValues>({ defaultValues: { searchText: search } }); 
 
   const handleClear = () => {
-    reset();
-    setSearchParams({});
-  }
+    setValue('searchText', defaultValues?.searchText as string);
+  };
  
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     setSearchParams(() => {
@@ -48,7 +47,7 @@ export const SearchForm = () => {
         control={control}
         name={"searchText"}
       />
-      <Button type="submit">Искать</Button>
+      <Button children={"Искать"}/>
     </form>
   );
 };

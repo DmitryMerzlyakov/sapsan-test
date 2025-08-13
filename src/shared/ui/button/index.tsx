@@ -8,7 +8,7 @@ export const Button = ({
   children,
   disabled = false,
   onClick,
-  type = "button",
+  type = "submit",
 }: ButtonProps) => {
   return (
     <button
