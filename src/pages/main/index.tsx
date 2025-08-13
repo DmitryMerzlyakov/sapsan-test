@@ -3,36 +3,11 @@ import style from "./style.module.css";
 import { useSearchParams } from "react-router-dom";
 import { useSearchPhotos } from "@/shared/hooks/useSearchPhotos";
 import classNames from "classnames";
-import { useEffect } from "react";
 
 export const Home = () => {
   const [searchParams] = useSearchParams();
   const { data, fetchNextPage, hasNextPage, isLoading } = useSearchPhotos(searchParams.get("search") || "");
   const photos = (data?.pages || []).flatMap((page) => page.results);
-
-  useEffect(() => {
-    const initialHeight = window.innerHeight;
-
-    document.documentElement.style.height = `${initialHeight}px`;
-    document.body.style.height = `${initialHeight}px`;
-
-    const onResize = () => {
-      const newHeight = window.innerHeight;
-      if (newHeight < initialHeight - 100) {
-        document.body.style.height = `${initialHeight}px`;
-      } else {
-        document.body.style.height = '100%';
-      }
-    };
-
-    window.addEventListener('resize', onResize);
-
-    return () => {
-      window.removeEventListener('resize', onResize);
-      document.body.style.height = '';
-      document.documentElement.style.height = '';
-    };
-  }, []);
 
   return (
     <div
