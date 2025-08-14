@@ -42,6 +42,7 @@ export const SearchForm = () => {
             iconPlaceholder={<SearchImage />}
             iconClear={<ClearImage />}
             onClear={handleClear}
+            autoFocus={window.innerWidth < 768}
           />
         )}
         control={control}

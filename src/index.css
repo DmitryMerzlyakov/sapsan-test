@@ -30,12 +30,14 @@
 body {
   color: var(--color-txt);
   background-color: var(--color-bgc);
-  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100dvh;
   width: 100%;
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  overflow: hidden;
 }
 
 img {

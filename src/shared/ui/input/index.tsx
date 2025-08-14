@@ -9,11 +9,12 @@ export interface IInputProps {
   value: string;
   iconPlaceholder: React.ReactNode;
   iconClear: React.ReactNode;
+  autoFocus: boolean;
 }
 
 export const Input = React.forwardRef(
   (
-    { iconPlaceholder, value, onChange, inputPlaceholder, iconClear, onClear }: IInputProps,
+    { iconPlaceholder, value, onChange, inputPlaceholder, iconClear, onClear, autoFocus }: IInputProps,
     ref: React.ForwardedRef<HTMLInputElement>
   ) => {
     return (
@@ -24,6 +25,7 @@ export const Input = React.forwardRef(
           placeholder={inputPlaceholder}
           value={value}
           ref={ref}
+          autoFocus={autoFocus}
         />
         <span className={style.input_icon_placeholder}>{iconPlaceholder}</span>
         {value && <span 
